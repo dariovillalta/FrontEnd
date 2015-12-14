@@ -4,11 +4,24 @@ angular.module('AngularScaffold.Controllers', []);
 angular.module('AngularScaffold.Services', []);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('home');
+	$urlRouterProvider.otherwise('login');
 	$stateProvider
-        .state('home', {
-            url: '/home',
-            templateUrl: '/views/home.html',
-            controller: 'HomeController'
-        });
-}])
+        .state('login', {
+            url: '/login',
+            templateUrl: '/views/login.html',
+            controller: 'loginController',
+            name: "login",
+            data: {
+              pageTitle: 'LogIn'
+            }
+        })
+        .state('regalos', {
+            url: '/regalos',
+            templateUrl: '/views/regalo.html',
+            controller: 'regalosController',
+            name: "regalos",
+            data: {
+              pageTitle: 'LogIn'
+            }
+        })
+}]);

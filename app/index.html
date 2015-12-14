@@ -30,17 +30,8 @@
           </div>
         </div>
       </nav>
-      <div ng-show="$sessionStorage.currentUser">
-        <h1>Bienvenido {{$sessionStorage.currentUser.username}}</h1>
-        <ul>
-          Sus roles son:
-          <li ng-repeat="role in $sessionStorage.currentUser.scope">{{role}}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="container">
+      
       <div ui-view></div>
-  </div>
   </body>
 
   <!-- bower:js -->
@@ -64,7 +55,10 @@
   <!-- inject:js -->
   <script src="scripts/controllers/HomeController.js"></script>
   <script src="scripts/controllers/navbarController.js"></script>
+  <script src="scripts/controllers/regalosController.js"></script>
+  <script src="scripts/controllers/loginController.js"></script>
   <script src="scripts/services/authService.js"></script>
   <script src="scripts/services/HomeService.js"></script>
+  <script src="scripts/services/regalosService.js"></script>
   <!-- endinject -->
 </html>

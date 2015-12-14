@@ -1,0 +1,78 @@
+<div ng-controller="regalosController" ng-class="viewBackground">
+  <div id="bodyRegalo">
+    <div class="container">
+      <div id="divDARIOV">
+        <div class="row">
+          <!-- Inicio agregar Regalo -->
+          <div >
+
+            <div class="row">
+              <div class="col-xs-6">
+                <p class= "letterCenter">Nombre</p>
+                <input type="text" class="form-control" ng-model="regalo.nombre">
+              </div>
+              <div class="col-xs-6">
+                <p class= "letterCenter">Descripcion</p>
+                <input type="text" class="form-control" ng-model="regalo.descripcion">
+              </div>
+            </div>
+
+            <div class="row"><br></div>
+
+            <div class="row">
+              <div class="col-xs-6">
+                <p class= "letterCenter">Peso</p>
+                <input type="number" class="form-control" ng-model="regalo.peso">
+              </div>
+              <div class="col-xs-6">
+                <p class= "letterCenter">Destinatario</p>
+                <input type="text" class="form-control" ng-model="regalo.destinatario">
+              </div>
+            </div>
+
+            <div class="row"><br></div>
+
+            <div class="row">
+              <div class="col-xs-offset-5 col-xs-6">
+                <button type="button" class="btn btn-success" ng-click="">Agregar Regalo</button>
+              </div>
+            </div>
+
+          </div>
+          <!-- Fin agregar Regalo -->
+
+          <div class="row"><br></div>
+          <div class="row"><br></div>
+
+          <!-- Inicio mostrar Regalo -->
+          <div class="row">
+            <div class="col-xs-12">
+              <table class="table table-bordered tablaDario">
+                <thead>
+                  <th></th>
+                  <th>Nombre</th>
+                  <th>Descricion</th>
+                  <th>Peso</th>
+                  <th>Destinatario</th>
+                  <th>Status</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="TableCenter"> <input type="checkbox" aria-label="..." id="check" name="check1"> </td>
+                    <td class="TableCenter"></td>
+                    <td class="TableCenter"></td>
+                    <td class="TableCenter"></td>
+                    <td class="TableCenter"></td>
+                    <td class="TableCenter"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Fin mostrar Regalo -->
+        </div>
+        <div class="row"></div>
+      </div>
+    </div>
+  </div>
+</div>
