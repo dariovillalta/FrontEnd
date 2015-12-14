@@ -1,6 +1,6 @@
 <div ng-controller="regalosController" ng-class="viewBackground">
   <div id="bodyRegalo">
-    <div class="container">
+    <div class="container" ng-init="loadRegalo()">
       <div id="divDARIOV">
         <div class="row">
           <!-- Inicio agregar Regalo -->
@@ -34,7 +34,7 @@
 
             <div class="row">
               <div class="col-xs-offset-5 col-xs-6">
-                <button type="button" class="btn btn-success" ng-click="">Agregar Regalo</button>
+                <button type="button" class="btn btn-success" ng-click="addRegalo()">Agregar Regalo</button>
               </div>
             </div>
 
@@ -57,13 +57,13 @@
                   <th>Status</th>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr ng-repeat="regalo in regaloArreglo">
                     <td class="TableCenter"> <input type="checkbox" aria-label="..." id="check" name="check1"> </td>
-                    <td class="TableCenter"></td>
-                    <td class="TableCenter"></td>
-                    <td class="TableCenter"></td>
-                    <td class="TableCenter"></td>
-                    <td class="TableCenter"></td>
+                    <td class="TableCenter">{{regalo.nombre}}</td>
+                    <td class="TableCenter">{{regalo.descripcion}}</td>
+                    <td class="TableCenter">{{regalo.peso}}</td>
+                    <td class="TableCenter">{{regalo.destinatario}}</td>
+                    <td class="TableCenter">{{regalo.status}}</td>
                   </tr>
                 </tbody>
               </table>
